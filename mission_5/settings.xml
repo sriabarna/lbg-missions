@@ -1,0 +1,14 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+    <servers>
+        <server>
+            <id>nexus.snapshot</id>
+            <username>nexus_deployment_user</username>
+            <password>YOUR_PASSWORD_HERE</password>
+        </server>
+        <server>
+            <id>nexus.release</id>
+            <username>nexus_deployment_user</username>
+            <password>YOUR_PASSWORD_HERE</password>
+        </server>
+    </servers>
+</settings>

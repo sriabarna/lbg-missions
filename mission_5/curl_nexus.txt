@@ -1,0 +1,1 @@
+curl -u nexus_deployment_user:PASSWORD_HERE -X GET "http://35.210.53.8:8081/service/rest/v1/components?repository=nexus-snapshots"
