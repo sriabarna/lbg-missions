@@ -16,6 +16,7 @@ spec:
         app: lbgcalc
         tier: lbgcalc
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: lbgcalc
           image: YOUR_DOCKERHUB_ID/vat:latest
@@ -24,13 +25,15 @@ spec:
             requests:
               memory: "8Mi"
               cpu: "50m"
+              ephemeral-storage: "2Gi"
             limits:
               memory: "16Mi"
               cpu: "100m"
+              ephemeral-storage: "4Gi"
           ports:
           - containerPort: 80
-            name: lbgcalc          
-    
+            name: lbgcalc
+            
 ---
 apiVersion: v1
 kind: Service
