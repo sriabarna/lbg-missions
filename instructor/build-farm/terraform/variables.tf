@@ -26,7 +26,3 @@ variable "minnodecount" {
 variable "credentialfile" {
   type = string
 }
-
-# variable "delegatecount" {
-#   type = number
-# }
