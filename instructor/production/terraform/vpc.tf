@@ -1,5 +1,5 @@
 resource "google_compute_network" "lbg_leaders_vpc_network" {
-  name = "lbg-cohort-targets-network"
+  name = "lbg-prod-network"
   auto_create_subnetworks = false
 }
 
