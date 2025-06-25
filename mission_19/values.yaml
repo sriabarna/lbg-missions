@@ -1,0 +1,2 @@
+image: YOUR_DOCKERHUB_ID/vat:<+pipeline.sequenceId>
+replicas: 1
