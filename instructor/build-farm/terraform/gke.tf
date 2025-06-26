@@ -24,8 +24,8 @@ resource "google_container_node_pool" "primary_nodes" {
       env = var.projectid
     }
         
-    machine_type = "e2-standard-4"
-    disk_size_gb = 20
+    machine_type = "e2-standard-16"
+    disk_size_gb = 128
     tags         = ["build-node", "${var.projectid}-gke"]
     metadata = {
       disable-legacy-endpoints = "true"
@@ -38,11 +38,11 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 }
 
-resource "kubernetes_namespace" "lbg-worker" {
-  metadata {
-    name = "lbg-worker"
-  }
-}
+# resource "kubernetes_namespace" "lbg-worker" {
+#   metadata {
+#     name = "lbg-worker"
+#   }
+# }
 
 # resource "kubernetes_namespace" "lbg" {
 #   count = var.delegatecount 
