@@ -1,3 +1,3 @@
-projectid = "lbg-mea-leaders-c14"
-credentialfile = "lbg-mea-leaders-c14-key.json"
+projectid = "lbg-mea-leaders-cxx"
+credentialfile = "lbg-mea-leaders-cxx-key.json"
 

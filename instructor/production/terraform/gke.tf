@@ -24,8 +24,8 @@ resource "google_container_node_pool" "primary_nodes" {
       env = var.projectid
     }
         
-    machine_type = "e2-standard-4"
-    disk_size_gb = 20
+    machine_type = "e2-standard-8"
+    disk_size_gb = 64
     tags         = ["gke-node", "${var.projectid}-gke"]
     metadata = {
       disable-legacy-endpoints = "true"
@@ -48,5 +48,18 @@ resource "kubernetes_namespace" "lbg" {
   count = var.delegatecount 
   metadata {
     name = "lbg-${count.index + 1}"
+  }
+}
+
+resource "kubernetes_namespace" "lbg-python" {
+  count = var.delegatecount 
+  metadata {
+    name = "lbg-python-${count.index + 1}"
+  }
+}
+
+resource "kubernetes_namespace" "lbg-python-trainer" {
+  metadata {
+    name = "lbg-python-trainer"
   }
 }
