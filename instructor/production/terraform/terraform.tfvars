@@ -1,3 +1,4 @@
-projectid = "lbg-mea-leaders-cxx"
-credentialfile = "lbg-mea-leaders-cxx-key.json"
-delegatecount = 1
+# projectid = "lbg-mea-leaders-cxx"
+projectid ="peak-woodland-465914-f0"
+credentialfile = "lbg-mea-leaders-ec4-key.json"
+delegatecount = 14
