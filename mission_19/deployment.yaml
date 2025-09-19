@@ -5,7 +5,7 @@ metadata:
   labels:
     app: lbgcalc
 spec:
-  replicas: {{.Values.replicas}}
+  replicas: 5
   selector:
     matchLabels:
       app: lbgcalc
@@ -19,7 +19,7 @@ spec:
       automountServiceAccountToken: false
       containers:
         - name: lbgcalc
-          image: {{.Values.image}}
+          image: sriabarnahub/vat-calc:latest
           imagePullPolicy: Always
           resources:
             requests:
